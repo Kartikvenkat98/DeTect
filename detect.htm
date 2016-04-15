@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detect</title>
+
+<meta charset="UTF-8" />
+
+<script src="jquery-1.12.1.js"></script>
+<script  src="js/home.js">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="detect.css"/>
+<link type="text/css" rel="stylesheet" href="css/home.css"/>
+</head>
+<body>
+<div id="loader-wrapper">
+    <div id="loader">
+    <img src="images/detect.jpg" style="height:150px;width:150px;" class="scaling">
+    <div id="loadercircle"></div>
+</div>
+ <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    </div>
+    
+<img id="logo" src="detect.jpg"/>
+<div class="squares" id="sq1" onClick="location.href='reload.htm'; " style="cursor:pointer;">Home</div></a>
+<div class="squares" id="sq2" onClick="location.href='Solutions/solutions.html';" style="cursor:pointer;">Solutions</div>
+
+<div class="squares" id="sq4" onClick="location.href='awards.htm';" style="cursor:pointer;">Awards</div></a>
+<div class="squares" id="sq5" onClick="location.href='products.html';" style="cursor:pointer;">Products</div>
+<div class="squares" id="sq6" onClick="location.href='Contact Us/contact.htm';" style="cursor:pointer;">Contact us</div>
+<div class="dropdown">
+<div class="squares" id="sq3">About us</div>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Team/team.html">Our team</a>
+    <a href="Vision/Vision.html">Our vision</a>
+    <a href="Target Market And Clients/marketing.htm">Target Market And<br/> Client Outreach</a>
+    <a href="Gallery/Gallery.html">Gallery</a>
+  </div>
+</div>
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="DTLogo2Theme3.jpg" style="width:100%; height: 700px; overflow:auto;">
+  <div class="text" style="color: white;">Enabling Productivity through Artificial Intelligence and NDE</div>
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="image.jpg" style="width:100%; height: 700px; overflow:auto;">
+  <div class="text" style="color:darkblue;">WE ARE CREATING EXCELLENCE IN INSPECTION TECHNOLOGY THROUGH INNOVATION</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="gal2.jpg" style="width:100%; height: 700px; overflow:auto;">
+  <div class="text" style="color:darkblue;">TOP TEN INNOVATIONS AWARD 2013 DST, GOVT OF INDIA , LOCKHEED MARTIN ,INNOVATION GROWTH PROGRAM</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="Poster_3.jpg" style="width:100%; height: 700px; overflow:auto;">
+  <div class="text" style=" margin-top: -650px; color:darkblue;">WE CREATE TECHNOLOGIES FOR COMPLETE PIPELINE</div>
+  <div class="text" style=" margin-top: -600px; color:darkblue;">INTEGRITY MANAGEMENT</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="team.png" style="width:100%; height: 700px; overflow:auto;">
+  <div class="text" style="margin-top: -690px; color:darkblue;">"Designing a product is designing a relationship" - STEVE ROGERS</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"><</a>
+<a class="next" onclick="plusSlides(1)">></a>
+
+</div>
+<br>
+
+<div class="dots" style="text-align:center; position: absolute; margin-top: 40em; margin-left: 45em;">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("active");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].classList.add("active");
+}
+</script>
+</body>
